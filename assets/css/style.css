@@ -193,3 +193,24 @@ img { max-width: 100%; }
 .contact-info ul { list-style: none; padding: 0; }
 .contact-info ul li { font-size: 16px; margin-bottom: 15px; display: flex; align-items: flex-start; }
 .contact-info ul li i { color: #210303; margin-right: 15px; width: 20px; text-align: center; line-height: 1.5; }
+
+/* 8. Correção para Banner Desaparecendo no Mobile */
+.static-hero-banner .hero-content {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: none !important; /* Remove qualquer animação de 'sumir' */
+}
+@media (max-width: 767px) {
+    .static-hero-banner .hero-content h1 {
+        font-size: 42px; /* Tamanho de fonte um pouco menor para o título no celular */
+        line-height: 1.2;
+    }
+    .static-hero-banner .hero-content p {
+        font-size: 16px; /* Tamanho de fonte para o parágrafo */
+        line-height: 1.6;
+    }
+    .static-hero-banner .hero-content-box {
+         padding: 0 15px; /* Adiciona um respiro nas laterais para não cortar o texto */
+    }
+}
