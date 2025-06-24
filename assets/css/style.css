@@ -6,7 +6,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Open+Sans:400,600,700");
 
 *, *::after, *::before { box-sizing: border-box; }
-html, body { height: 100%; }
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* <-- CORREÇÃO PARA O OVERFLOW HORIZONTAL */
+}
+
 body { background-color: #ffffff; line-height: 25px; font-size: 15px; font-family: "Open Sans", sans-serif; color: #454545; position: relative; }
 h1, h2, h3, h4, h5, h6 { color: #1d2736; font-family: "Montserrat", sans-serif; font-weight: 400; margin-top: 0; }
 h1 { font-size: 70px; font-weight: 700; }
@@ -24,7 +29,6 @@ button:focus, a:focus { outline: none; box-shadow: none; }
 ul { list-style: outside none none; margin: 0; padding: 0; }
 img { max-width: 100%; }
 .is-sticky { position: fixed; top: 0; width: 100%; background: #ffffff; z-index: 999; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-.is-sticky .header-transparant { background: #210303; }
 .section-ptb { padding: 100px 0; }
 @media only screen and (max-width: 991px) { .section-ptb { padding: 70px 0; } }
 #scrollUp { width: 40px; height: 40px; background-color: #210303; border: 3px solid #eeeeee; color: #ffffff; right: 20px; bottom: 60px; text-align: center; border-radius: 50px; z-index: 9811 !important; }
@@ -82,16 +86,10 @@ img { max-width: 100%; }
 .mt-lg-0 { @media (min-width: 992px) { margin-top: 0 !important; } }
 
 /* 0. Banner Estático */
-.static-hero-banner {
-    height: 90vh; /* Define a altura como 90% da altura da tela */
-    min-height: 600px; /* Garante uma altura mínima em telas maiores */
-}
+.static-hero-banner { height: 90vh; min-height: 600px; }
 
 /* 1. Ajuste do Logo */
-.logo img {
-    height: 75px;
-    width: auto;
-}
+.logo img { height: 75px; width: auto; }
 
 /* 2. Seção Sobre (Lista e Carrossel) */
 .about-carousel .slick-dots {
@@ -103,17 +101,17 @@ img { max-width: 100%; }
     padding: 0;
     margin: 0;
     width: 100%;
-}
-
-.about-carousel .slick-dots li {
+  }
+  
+  .about-carousel .slick-dots li {
     position: relative;
     display: inline-block; /* Coloca os itens um ao lado do outro */
     cursor: pointer;
     margin: 0 5px; /* Espaçamento entre os pontos */
     padding: 0;
-}
-
-.about-carousel .slick-dots li button {
+  }
+  
+  .about-carousel .slick-dots li button {
     border: 0;
     background: transparent;
     display: block;
@@ -125,9 +123,9 @@ img { max-width: 100%; }
     color: transparent;
     padding: 5px;
     cursor: pointer;
-}
-
-.about-carousel .slick-dots li button:before {
+  }
+  
+  .about-carousel .slick-dots li button:before {
     content: '•'; /* Usa o caractere de ponto como navegador */
     font-family: 'slick';
     font-size: 30px; /* Tamanho do ponto */
@@ -140,14 +138,14 @@ img { max-width: 100%; }
     text-align: center;
     opacity: .25;
     color: #210303; /* Cor do ponto inativo (usando a cor da sua marca) */
-}
-
-.about-carousel .slick-dots li.slick-active button:before {
+  }
+  
+  .about-carousel .slick-dots li.slick-active button:before {
     opacity: .75; /* Deixa o ponto ativo mais visível */
     color: #210303;
-
-}
-
+    
+  }
+  
 /* 3. Seção de Cursos Completa */
 .course-category { font-family: "Montserrat", sans-serif; font-weight: 700; color: #1d2736; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #210303; display: inline-block; }
 .course-list-full { list-style: none; padding-left: 0; }
@@ -166,12 +164,7 @@ img { max-width: 100%; }
 
 /* 5. Galeria de Alunos */
 .gallery-item { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.gallery-item img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
+.gallery-item img { width: 100%; height: 350px; object-fit: cover; transition: transform 0.4s ease; }
 .gallery-item:hover img { transform: scale(1.1); }
 .gallery-hover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(33, 3, 3, 0.6); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease; }
 .gallery-item:hover .gallery-hover { opacity: 1; }
@@ -185,7 +178,6 @@ img { max-width: 100%; }
 .btn-whatsapp { background-color: #25D366; border-color: #25D366; color: #fff !important; }
 .btn-whatsapp:hover { background-color: #128C7E; border-color: #128C7E; }
 .btn-whatsapp i { margin-right: 10px; font-size: 18px; }
-@media (max-width: 991px) { .agenda-content { padding-left: 0; margin-top: 40px; text-align: center; } }
 
 /* 7. Seção de Contato */
 .contact-info h4 { font-weight: 700; color: #1d2736; margin-bottom: 10px; }
@@ -194,23 +186,18 @@ img { max-width: 100%; }
 .contact-info ul li { font-size: 16px; margin-bottom: 15px; display: flex; align-items: flex-start; }
 .contact-info ul li i { color: #210303; margin-right: 15px; width: 20px; text-align: center; line-height: 1.5; }
 
-/* 8. Correção para Banner Desaparecendo no Mobile */
-.static-hero-banner .hero-content {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    animation: none !important; /* Remove qualquer animação de 'sumir' */
+/* 8. Correções para Mobile */
+.static-hero-banner .hero-content { display: block !important; opacity: 1 !important; visibility: visible !important; animation: none !important; }
+
+@media (max-width: 991px) {
+    .agenda-content { padding-left: 0; margin-top: 40px; text-align: center; }
+    /* Adiciona espaçamento entre o texto e o carrossel da seção Sobre no mobile */
+    .about-area .agency-benefits {
+        margin-bottom: 50px;
+    }
 }
 @media (max-width: 767px) {
-    .static-hero-banner .hero-content h1 {
-        font-size: 42px; /* Tamanho de fonte um pouco menor para o título no celular */
-        line-height: 1.2;
-    }
-    .static-hero-banner .hero-content p {
-        font-size: 16px; /* Tamanho de fonte para o parágrafo */
-        line-height: 1.6;
-    }
-    .static-hero-banner .hero-content-box {
-         padding: 0 15px; /* Adiciona um respiro nas laterais para não cortar o texto */
-    }
+    .static-hero-banner .hero-content h1 { font-size: 42px; line-height: 1.2; }
+    .static-hero-banner .hero-content p { font-size: 16px; line-height: 1.6; }
+    .static-hero-banner .hero-content-box { padding: 0 15px; }
 }
