@@ -1,0 +1,191 @@
+/*-----------------------------------------------------------------------------------
+    Version: 1.0 - Modified for Instituto Ágape
+-----------------------------------------------------------------------------------*/
+
+/*-- 01. Theme default CSS --*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Open+Sans:400,600,700");
+
+*, *::after, *::before { box-sizing: border-box; }
+html, body { height: 100%; }
+body { background-color: #ffffff; line-height: 25px; font-size: 15px; font-family: "Open Sans", sans-serif; color: #454545; position: relative; }
+h1, h2, h3, h4, h5, h6 { color: #1d2736; font-family: "Montserrat", sans-serif; font-weight: 400; margin-top: 0; }
+h1 { font-size: 70px; font-weight: 700; }
+h2 { font-size: 36px; line-height: 42px; }
+h4 { font-size: 24px; line-height: 30px; }
+h6 { font-size: 18px; line-height: 18px; }
+p:last-child { margin-bottom: 0; }
+a, button { color: inherit; display: inline-block; line-height: inherit; text-decoration: none; cursor: pointer; }
+a, button, img, input, span { transition: all 0.3s ease 0s; }
+*:focus { outline: none !important; }
+a:focus { color: inherit; outline: none; text-decoration: none; }
+a:hover { text-decoration: none; color: #210303; }
+button, input[type="submit"] { cursor: pointer; }
+button:focus, a:focus { outline: none; box-shadow: none; }
+ul { list-style: outside none none; margin: 0; padding: 0; }
+img { max-width: 100%; }
+.is-sticky { position: fixed; top: 0; width: 100%; background: #ffffff; z-index: 999; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+.is-sticky .header-transparant { background: #210303; }
+.section-ptb { padding: 100px 0; }
+@media only screen and (max-width: 991px) { .section-ptb { padding: 70px 0; } }
+#scrollUp { width: 40px; height: 40px; background-color: #210303; border: 3px solid #eeeeee; color: #ffffff; right: 20px; bottom: 60px; text-align: center; border-radius: 50px; z-index: 9811 !important; }
+#scrollUp i { display: block; line-height: 34px; font-size: 22px; }
+.bg-gray { background-color: #f8f8f8; }
+.image-bg { background-size: cover; background-position: center; background-repeat: no-repeat; }
+[data-agency-gradient] { position: relative; }
+[data-agency-gradient] > * { position: relative; z-index: 2; }
+[data-agency-gradient]:before { content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 100%; z-index: 1; background-image: linear-gradient(-45deg, #03a9f4, #341941); }
+[data-agency-gradient="6"]:before { opacity: 0.6; }
+.section-title { margin-bottom: 55px; }
+.section-title h2 { font-weight: 700; margin: 0; }
+.section-title p { max-width: 550px; margin-top: 16px; font-size: 16px; margin-left: auto; margin-right: auto; }
+.btn { line-height: 24px; border: 1px solid #210303; padding: 10px 30px; font-size: 14px; font-weight: 500; text-transform: uppercase; color: #ffffff; background: #210303; }
+.btn:hover { color: #ffffff; border: 1px solid #1d2736; background-color: #1d2736; }
+.btn.btn-circle { border-radius: 50px; }
+.btn.btn-sm { padding: 8px 20px; font-size: 12px; }
+
+/*-- 02. Header --*/
+.logo { padding: 15px 0; }
+.main-menu > ul { display: flex; flex-wrap: wrap; justify-content: center; }
+.main-menu > ul > li { position: relative; margin: 0 15px; }
+.main-menu > ul > li > a { display: block; color: #525252; padding: 28px 0; font-weight: 600; text-transform: uppercase; }
+.main-menu > ul > li > a::after { content: ""; height: 2px; width: 0; background: #210303; position: absolute; bottom: 15px; left: 0; transition: all 0.3s ease-in-out; }
+.main-menu > ul > li > a:hover::after, .main-menu > ul > li.current > a::after { width: 100%; }
+.clickable-mainmenu { background: #fff; color: #353535; height: 100vh; overflow-y: auto; padding: 40px 10px; position: fixed; left: 0; top: 0; transform: translateX(-110%); transition: transform 0.5s ease-in-out; width: 300px; z-index: 9999; }
+.clickable-mainmenu.inside { transform: translateX(0px); }
+.clickable-menu.clickable-mainmenu-active a { float: right; font-size: 24px; color: #333; }
+.clickable-mainmenu-close { background: transparent; text-align: right; border: none; font-size: 20px; margin-bottom: 30px; }
+
+/*-- 03. Hero Section --*/
+.hero-content > * { animation-duration: 1s; animation-fill-mode: both; animation-name: fadeOutUp; }
+.slick-active .hero-content > * { animation-name: fadeInUp; }
+.hero-content h1 { color: #ffffff; margin-bottom: 10px; }
+.hero-content p { max-width: 630px; color: #ffffff; margin: 15px 0; font-size: 18px; }
+.hero-content .btn { margin-top: 20px; }
+
+/*-- Form Style --*/
+.form-style-3 form input, .form-style-3 form textarea { border: 0; border-bottom: 1px solid #c0c0c0; padding-bottom: 4px; font-size: 16px; width: 100%; background: transparent; }
+.form-style-3 form input { margin-bottom: 40px; }
+.form-style-3 form textarea { min-height: 120px; resize: none; }
+.form-style-3 form input:focus, .form-style-3 form textarea:focus { border-bottom-color: #210303; }
+.form-messege { margin-top: 15px; }
+
+/*-- Footer --*/
+.copyright { background: #f1f1f1; padding: 30px 0; }
+.copyright .content p { color: #424242; font-size: 14px; margin: 10px 0; }
+
+/* ============================================= */
+/* --- ESTILOS PERSONALIZADOS INSTITUTO FOCO --- */
+/* ============================================= */
+.mt-5 { margin-top: 3rem !important; }
+.mb-30 { margin-bottom: 30px; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt--30 { margin-top: -30px; }
+.mt-lg-0 { @media (min-width: 992px) { margin-top: 0 !important; } }
+
+/* 1. Ajuste do Logo */
+.logo img {
+    height: 75px;
+    width: auto;
+}
+
+/* 2. Seção Sobre (Carrossel e Lista) */
+.about-carousel .slick-dots {
+    position: absolute;
+    bottom: -25px; /* Ajusta a posição vertical dos pontos */
+    list-style: none; /* Remove os números e marcadores de lista */
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.about-carousel .slick-dots li {
+    position: relative;
+    display: inline-block; /* Coloca os itens um ao lado do outro */
+    cursor: pointer;
+    margin: 0 5px; /* Espaçamento entre os pontos */
+    padding: 0;
+}
+
+.about-carousel .slick-dots li button {
+    border: 0;
+    background: transparent;
+    display: block;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    line-height: 0px;
+    font-size: 0px; /* Esconde o texto/número do botão */
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.about-carousel .slick-dots li button:before {
+    content: '•'; /* Usa o caractere de ponto como navegador */
+    font-family: 'slick';
+    font-size: 30px; /* Tamanho do ponto */
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    opacity: .25;
+    color: #210303; /* Cor do ponto inativo (usando a cor da sua marca) */
+}
+
+.about-carousel .slick-dots li.slick-active button:before {
+    opacity: .75; /* Deixa o ponto ativo mais visível */
+    color: #210303;
+}
+
+/* 3. Seção de Cursos Completa */
+.course-category { font-family: "Montserrat", sans-serif; font-weight: 700; color: #1d2736; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #210303; display: inline-block; }
+.course-list-full { list-style: none; padding-left: 0; }
+.course-list-full li { margin-bottom: 12px; font-size: 16px; }
+.course-list-full li i { color: #210303; margin-right: 12px; }
+.course-cta { background-color: #fff; padding: 40px; text-align: center; border-radius: 8px; border: 1px solid #e0e0e0; }
+.course-cta img { max-height: 80px; margin-bottom: 20px; }
+
+/* 4. Seção Destaques (Ajuste de Card) */
+.service-1.agency-service { background: #fff; padding: 30px; border-radius: 8px; transition: all 0.3s ease; border: 1px solid #e0e0e0; height: 100%; }
+.service-1.agency-service:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.service-1 .icon { margin-bottom: 30px; }
+.service-1 .icon i { color: #210303; font-size: 50px; }
+.service-1 .content h4 { color: #333333; font-size: 18px; font-weight: 600; text-transform: uppercase; }
+.service-1 .content p { color: #333; font-size: 15px; line-height: 25px; margin: 0; padding: 0 12px; }
+.service-1 .content p::before, .service-1 .content p::after { display: none; }
+
+/* 5. Galeria de Alunos */
+.gallery-item { position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.gallery-item img {
+    width: 100%;
+    height: 350px; /* << ALTURA ALTERADA AQUI */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-hover { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(33, 3, 3, 0.6); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease; }
+.gallery-item:hover .gallery-hover { opacity: 1; }
+.gallery-hover i { color: #fff; font-size: 36px; }
+
+/* 6. Seção de Agenda */
+.agenda-art img { width: 100%; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+.agenda-content { padding-left: 30px; }
+.agenda-content h2 { font-size: 38px; font-weight: 700; color: #1d2736; margin-bottom: 20px; }
+.agenda-content p { font-size: 18px; line-height: 1.7; margin-bottom: 30px; }
+.btn-whatsapp { background-color: #25D366; border-color: #25D366; color: #fff !important; }
+.btn-whatsapp:hover { background-color: #128C7E; border-color: #128C7E; }
+.btn-whatsapp i { margin-right: 10px; font-size: 18px; }
+@media (max-width: 991px) { .agenda-content { padding-left: 0; margin-top: 40px; text-align: center; } }
+
+/* 7. Seção de Contato */
+.contact-info h4 { font-weight: 700; color: #1d2736; margin-bottom: 10px; }
+.contact-info p { margin-bottom: 25px; }
+.contact-info ul { list-style: none; padding: 0; }
+.contact-info ul li { font-size: 16px; margin-bottom: 15px; display: flex; align-items: flex-start; }
+.contact-info ul li i { color: #210303; margin-right: 15px; width: 20px; text-align: center; line-height: 1.5; }
