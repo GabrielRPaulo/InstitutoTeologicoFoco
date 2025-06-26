@@ -9,7 +9,7 @@
 
 html, body {
     height: 100%;
-    overflow-x: hidden; /* <-- CORREÇÃO PARA O OVERFLOW HORIZONTAL */
+    overflow-x: hidden;
 }
 
 body { background-color: #ffffff; line-height: 25px; font-size: 15px; font-family: "Open Sans", sans-serif; color: #454545; position: relative; }
@@ -114,6 +114,7 @@ img { max-width: 100%; }
   .about-carousel .slick-dots li button {
     border: 0;
     background: transparent;
+    border-radius: 60px ;
     display: block;
     height: 20px;
     width: 20px;
@@ -152,7 +153,7 @@ img { max-width: 100%; }
 .course-list-full li { margin-bottom: 12px; font-size: 16px; }
 .course-list-full li i { color: #210303; margin-right: 12px; }
 .course-cta { background-color: #fff; padding: 40px; text-align: center; border-radius: 8px; border: 1px solid #e0e0e0; }
-.course-cta img { max-height: 80px; margin-bottom: 20px; }
+.course-cta img { max-height: 120px; /* <-- ALTURA DO CERTIFICADO ALTERADA AQUI */ margin-bottom: 20px; }
 
 /* 4. Seção Destaques (Ajuste de Card) */
 .service-1.agency-service { background: #fff; padding: 30px; border-radius: 8px; transition: all 0.3s ease; border: 1px solid #e0e0e0; height: 100%; }
