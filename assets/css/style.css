@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------
-    Version: 1.0 - Modified for Instituto Ágape
+    Version: 1.0 - Modified for Instituto Foco
 -----------------------------------------------------------------------------------*/
 
 /*-- 01. Theme default CSS --*/
@@ -76,7 +76,7 @@ img { max-width: 100%; }
 .copyright .content p { color: #424242; font-size: 14px; margin: 10px 0; }
 
 /* ============================================= */
-/* --- ESTILOS PERSONALIZADOS DO PROJETO ÁGAPE --- */
+/* --- ESTILOS PERSONALIZADOS DO PROJETO Foco --- */
 /* ============================================= */
 .mt-5 { margin-top: 3rem !important; }
 .mb-30 { margin-bottom: 30px; }
@@ -201,4 +201,115 @@ img { max-width: 100%; }
     .static-hero-banner .hero-content h1 { font-size: 42px; line-height: 1.2; }
     .static-hero-banner .hero-content p { font-size: 16px; line-height: 1.6; }
     .static-hero-banner .hero-content-box { padding: 0 15px; }
+}
+
+/*===== Gallery Carousel with Info (Updated for Images) =====*/
+.gallery-item-wrapper {
+    padding: 0 15px;
+    display: flex; /* Centraliza verticalmente as imagens */
+    align-items: center;
+    justify-content: center; /* Opcional: se quiser centralizar horizontalmente */
+}
+
+.gallery-item-wrapper img {
+    max-height: 1000px; /* Aumenta a altura máxima das imagens */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Opcional: se quiser bordas arredondadas nas imagens */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Opcional: sombra nas imagens */
+}
+
+.gallery-item-wrapper a.gallery-popup {
+    display: block; /* Garante que o link ocupe todo o espaço */
+    height: 170%; /* Permite que a altura seja controlada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item-wrapper a.gallery-popup img {
+    object-fit: contain; /* Garante que a imagem caiba dentro do container sem cortar */
+}
+
+.gallery-carousel .slick-center .gallery-item-wrapper img {
+    transform: scale(1.05); /* Leve destaque no item central */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Resto do CSS do carrossel (setas, dots) permanece o mesmo */
+.gallery-carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-carousel .slick-prev {
+    left: 10px;
+}
+
+.gallery-carousel .slick-next {
+    right: 10px;
+}
+
+.gallery-carousel .slick-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery-carousel .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.gallery-carousel .slick-dots button {
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.gallery-carousel .slick-dots li.slick-active button {
+    background: #210303;
+    border-color: #210303;
+}
+
+/* Style for arrow variation 3 */
+.slick-arrow-3 .slick-arrow {
+    background: transparent;
+    color: #555;
+    font-size: 30px;
+    box-shadow: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.slick-arrow-3 .slick-prev {
+    left: 0;
+}
+
+.slick-arrow-3 .slick-next {
+    right: 0;
+}
+
+.slick-arrow-3 .slick-arrow:hover {
+    background-color: #210303;
+    color: #fff;
+    border-color: #210303;
 }

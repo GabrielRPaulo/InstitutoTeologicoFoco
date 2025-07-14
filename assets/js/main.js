@@ -55,6 +55,42 @@
         adaptiveHeight: true
     });
 
+    /*-- Gallery Carousel (Nossa Comunidade) --*/
+    $('.gallery-carousel').slick({
+        infinite: true, // <-- AQUI ESTÁ A OPÇÃO PARA O CARROSSEL INFINITO
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '60px',
+        arrows: true,
+        prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    centerPadding: '40px'
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '50px'
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '0px'
+                }
+            }
+        ]
+    });
+
     /*-- Video Popup --*/
     $('.video-popup').magnificPopup({
         type: 'iframe',
