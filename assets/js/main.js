@@ -52,7 +52,9 @@
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        autoplay: true,             
+        autoplaySpeed: 3000  
     });
 
     /*-- Gallery Carousel (Nossa Comunidade) --*/
