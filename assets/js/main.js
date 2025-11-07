@@ -53,13 +53,13 @@
         speed: 500,
         slidesToShow: 1,
         adaptiveHeight: true,
-        autoplay: true,             
-        autoplaySpeed: 3000  
+        autoplay: true,
+        autoplaySpeed: 3000
     });
 
-    /*-- Gallery Carousel (Nossa Comunidade) --*/
+    /*-- Gallery Carousel (Informativos) --*/
     $('.gallery-carousel').slick({
-        infinite: true, // <-- AQUI ESTÁ A OPÇÃO PARA O CARROSSEL INFINITO
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
@@ -69,28 +69,35 @@
         nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
         dots: true,
         responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    centerPadding: '40px'
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: '50px'
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    centerPadding: '0px'
-                }
-            }
+            { breakpoint: 992, settings: { slidesToShow: 2, centerPadding: '40px' } },
+            { breakpoint: 768, settings: { slidesToShow: 1, centerPadding: '50px' } },
+            { breakpoint: 576, settings: { slidesToShow: 1, centerPadding: '0px' } }
         ]
+    });
+
+    /*-- Gallery Pages Carousel (Desktop) --*/
+    $('.gallery-pages-carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>'
+    });
+
+    /*-- Gallery Mobile Carousel --*/
+    $('.gallery-mobile-carousel').slick({
+        dots: false,         // <-- ALTERADO AQUI
+        infinite: true,
+        speed: 500,
+        arrows: true,        // <-- ALTERADO AQUI
+        prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
     });
 
     /*-- Video Popup --*/
@@ -105,6 +112,12 @@
         gallery: {
             enabled: true
         },
+        mainClass: 'mfp-fade'
+    });
+
+    /*-- About Carousel Image Popup --*/
+    $('.about-popup').magnificPopup({
+        type: 'image',
         mainClass: 'mfp-fade'
     });
 

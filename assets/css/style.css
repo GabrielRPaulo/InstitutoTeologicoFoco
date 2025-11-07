@@ -313,3 +313,133 @@ img { max-width: 100%; }
     color: #fff;
     border-color: #210303;
 }
+
+/* ============================================= */
+/* --- ESTILOS PARA O CARROSSEL DA GALERIA (PÁGINAS) --- */
+/* ============================================= */
+
+.gallery-pages-carousel {
+    position: relative;
+    padding: 0 40px; /* Adiciona espaço para as setas não ficarem em cima das imagens */
+}
+
+/* Estilo Geral para as Setas */
+.gallery-pages-carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-pages-carousel .slick-arrow:hover {
+    background-color: #210303;
+    color: #ffffff;
+    border-color: #210303;
+}
+
+/* Posição da Seta "Anterior" (Esquerda) */
+.gallery-pages-carousel .slick-prev {
+    left: -25px; 
+}
+
+/* Posição da Seta "Próximo" (Direita) */
+.gallery-pages-carousel .slick-next {
+    right: -25px;
+}
+
+/* Estilo para os Pontos de Navegação (Dots) */
+.gallery-pages-carousel .slick-dots {
+    text-align: center;
+    margin-top: 30px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.gallery-pages-carousel .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.gallery-pages-carousel .slick-dots li button {
+    font-size: 0; /* Esconde o número */
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Estilo do Ponto Ativo */
+.gallery-pages-carousel .slick-dots li.slick-active button {
+    background: #210303;
+    border-color: #210303;
+}
+
+/* Ajustes para Telas Menores (Mobile) */
+@media (max-width: 767px) {
+    .gallery-pages-carousel {
+        padding: 0; /* Remove o espaço lateral no mobile */
+    }
+
+    .gallery-pages-carousel .slick-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .gallery-pages-carousel .slick-prev {
+        left: 5px;
+    }
+
+    .gallery-pages-carousel .slick-next {
+        right: 5px;
+    }
+}
+
+/* ============================================= */
+/* --- ESTILOS PARA AS SETAS DO CARROSSEL MOBILE --- */
+/* ============================================= */
+
+.gallery-mobile-carousel .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e0e0e0;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-mobile-carousel .slick-arrow:hover {
+    background-color: #210303;
+    color: #ffffff;
+}
+
+.gallery-mobile-carousel .slick-prev {
+    left: 10px; 
+}
+
+.gallery-mobile-carousel .slick-next {
+    right: 10px;
+}
